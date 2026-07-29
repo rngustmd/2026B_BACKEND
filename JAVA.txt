@@ -15,7 +15,7 @@
 
 [ 자료 ]
     1. 리터럴 : 상수( true/false , 'a' , 3 )
-    2. 자료타입(형)
+    2. 자료타입(형) --> 암기
         1) boolean  1byte   true/false
         2) char     2byte   ''감싼 문자1개저장
         3) byte     1byte   -128 ~ +127
