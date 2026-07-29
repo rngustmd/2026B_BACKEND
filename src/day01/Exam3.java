@@ -52,10 +52,5 @@ public class Exam3 {  // class start
         System.out.printf("입력받은 자료: %d \n" , i );
 
 
-
-
-
-
-
     }// m e 
 } // class end 
