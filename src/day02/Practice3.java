@@ -42,18 +42,70 @@ public class Practice3 {
         System.out.print( "비밀번호: "); String 비밀번호 = scan.next();
         // * 문자열A.equals(문자열B) && 이면서
         System.out.println( 아이디.equals("admin") && 비밀번호.equals("1234") );
-    
+
+        // 7. (조건A && 조건B) , if/삼항 사용이유 : true/false 자료 다른 자료로 표현/흐름 변경
+        System.out.print("정수를 입력하세요: "); int 정수3 = scan.nextInt();
+        System.out.println( 정수3 % 2 == 1 && 정수3 % 7 == 0 );
+
+        // 8. 
+        System.out.print("1차 점수: "); int 점수1 = scan.nextInt();
+        System.out.print("2차 점수: "); int 점수2 = scan.nextInt();
+        System.out.println( 점수1 + 점수2 >= 150 ? "합격" : "불합격" );
+
+        // 9.
+        System.out.print( "이름을 입력하세요: "); String 이름 = scan.next();
+        // 변수선언: 타입명 변수 = 값 , 변수1
+        // 수정: 변수명 = 새로운값   , 변수는 *하나*의 자료/값 저장
+        이름 = 이름.equals("유재석") ? "방장" : ""; 
+        System.out.println( 이름 );
+
+        // 10. 
+        System.out.print("밑변: "); double 밑변 = scan.nextDouble(); 
+        System.out.print("높이: "); double 높이 = scan.nextDouble();
+        double 넓이2 = ( 밑변 * 높이 ) / 2.0; 
+        System.out.println( "삼각형의 넓이:" + 넓이2 );
+
+        // 11. 
+        System.out.print("섭씨 온도: "); double 섭씨 = scan.nextDouble();
+        double 화씨 = (섭씨 * 9.0 / 5.0) + 32;
+        System.out.println("화씨 온도: " + 화씨);
+        
+        // 12.
+        System.out.print( "태어난 년도: "); int 년도 = scan.nextInt();
+        int 나이 = 2025 - 년도;
+        System.out.println("2025년 기준 나이: " + 나이);
+
+        // 13. 
+        System.out.print("키(cm): "); double 키 = scan.nextDouble();
+        System.out.print("몸무게(kg): "); double 몸무게 = scan.nextDouble();
+        double 키2 = 키 / 100.0;
+        double BMI = 몸무게 / (키2 * 키2);
+        System.out.println( "BMI 지수: " + BMI);
+
+        // 14. 
+        System.out.print("아이디: "); String 아이디2 = scan.next();
+        System.out.print("이메일: "); String 이메일 = scan.next();
+        boolean 결과 = 아이디2.equals("admin") || 이메일.equals("admin@test.com");
+        System.out.println( 결과 ? "관리자" : "일반사용자" );
+
+        // 15. 
+        System.out.print( "점수를 입력하세요: "); int 점수3 = scan.nextInt();
+        System.out.println( 점수3>=90 && 점수3 < 100 ? 'A' : 점수3 >= 80 ? 'B' : 'C');
+        
+        // 16. 
+        System.out.print("나이를 입력하세요: "); int 나이2 = scan.nextInt();
+        System.out.println(나이2 >= 20 && 나이2 < 30 ? "이벤트 대상입니다." : "이벤트 대상이 아닙니다.");
+
     }
 
 }
-/*[문제 6] Scanner를 이용해 아이디와 비밀번호를 String으로 입력받아, 아이디가 "admin"이고 비밀번호가 "1234"와 모두 일치하면 true, 아니면 false를 출력하시오.
 
-요구 조건:문자열 비교는 .equals() 메소드를 사용해야 합니다.
+/*[문제 16] Scanner를 이용해 나이(int)를 입력받아, 20대(20세 이상 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 그렇지 않으면 "이벤트 대상이 아닙니다."를 출력하시오.
+
 입력 예시:
-아이디: admin
-비밀번호: 1234
+나이를 입력하세요: 25
 출력 예시:
-결과: true */
+이벤트 대상입니다. */
 
 /*[문제 1] Scanner를 이용해 국어, 영어, 수학 점수를 각각 정수(int)로 입력받아, 총점과 평균을 계산하여 출력하시오.
 
@@ -151,7 +203,7 @@ public class Practice3 {
 삼각형의 넓이: 27.5
 
 
-[문제 11] Scanner를 이용해 섭씨 온도를 double로 입력받아, 화씨 온도로 변환하여 출력하시오.
+/* [문제 11] Scanner를 이용해 섭씨 온도를 double로 입력받아, 화씨 온도로 변환하여 출력하시오.
 
 요구 조건:
 공식: (섭씨 * 9.0 / 5.0) + 32
