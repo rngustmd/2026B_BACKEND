@@ -36,7 +36,7 @@ public class Exam1 {
             case 'B' : System.out.println("B등급 입니다."); break;
             case 'C' : System.out.println("C등급 입니다."); break;
             default : System.out.println("재시험 입니다."); break;}
-        
+    
         switch(grade){
             case 'A' :
             case 'B' : System.out.println("합격 입니다."); break;
@@ -55,10 +55,11 @@ public class Exam1 {
                 switch( adult ){
                     case 1 : System.out.println("B등급 성인 입니다."); break;
                     case 0 : System.out.println("B등급 미성년자 입니다."); break;
+            }
         }
-        // 반복문
-       }
+        
     }
+    
 }
 
 
