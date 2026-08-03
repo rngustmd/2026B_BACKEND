@@ -39,11 +39,11 @@ public class Practice4 {
         입력 예시:
         주민등록번호(-포함) 13자리를 입력하세요: 950101-2******
         출력 예시: 여자 */
-        System.out.print("주민등록번호(-포함) 13자리를 입력하세요: "); String 번호 = scan.next();
-        char 성별 = 번호.charAt(7);
-        if( 번호.equals("1") || 번호.equals("3")){
-            System.out.println("남자");
-        }else{System.out.println("여자");}
+        // System.out.print("주민등록번호(-포함) 13자리를 입력하세요: "); String 번호 = scan.next();
+        // char 성별 = 번호.charAt(7);
+        // if( 번호.equals("1") || 번호.equals("3")){
+        //     System.out.println("남자");
+        // }else{System.out.println("여자");}
 
 
 
@@ -56,11 +56,11 @@ public class Practice4 {
         점수를 입력하세요: 750
         출력 예시: B급 경품 */
 
-        System.out.print( "점수를 입력하세요: " ); int 점수3 = scan.nextInt();
-        if( 점수3 >= 900 ){ System.out.println("A급 경품");}
-        else if( 점수3 >= 700){ System.out.println( "B급 경품");}
-        else if( 점수3 >= 500){ System.out.println("C급 경품");}
-        else{ System.out.println("참가상");};
+        // System.out.print( "점수를 입력하세요: " ); int 점수3 = scan.nextInt();
+        // if( 점수3 >= 900 ){ System.out.println("A급 경품");}
+        // else if( 점수3 >= 700){ System.out.println( "B급 경품");}
+        // else if( 점수3 >= 500){ System.out.println("C급 경품");}
+        // else{ System.out.println("참가상");};
 
         /*[문제 7] Scanner를 이용해 사용자 역할(role)을 문자열로 입력받습니다. 역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
         admin: '모든 기능에 접근할 수 있습니다.'
@@ -70,11 +70,11 @@ public class Practice4 {
         입력 예시:
         역할을 입력하세요: editor
         출력 예시: 콘텐츠 수정 및 생성 기능에 접근할 수 있습니다. */
-        System.out.print("역할을 입력하세요: "); String 역할 = scan.next();
-        if( 역할.equals("admin")){ System.out.println("모든 기능에 접근할 수 있습니다.");}
-        else if( 역할.equals("editor")){ System.out.println( "콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.");}
-        else if( 역할.equals("viewer")){ System.out.println("콘텐츠 조회만 가능합니다.");}
-        else{ System.out.println("정의되지 않은 역할입니다.");}
+        // System.out.print("역할을 입력하세요: "); String 역할 = scan.next();
+        // if( 역할.equals("admin")){ System.out.println("모든 기능에 접근할 수 있습니다.");}
+        // else if( 역할.equals("editor")){ System.out.println( "콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.");}
+        // else if( 역할.equals("viewer")){ System.out.println("콘텐츠 조회만 가능합니다.");}
+        // else{ System.out.println("정의되지 않은 역할입니다.");}
 
         /*[문제 8] Scanner를 이용해 사용자의 나이를 정수로 입력받아, 아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
         8세 미만: '무료'
@@ -84,12 +84,11 @@ public class Practice4 {
         입력 예시:
         나이를 입력하세요: 22
         출력 예시: 10,000원 */
-
-        System.out.print( "나이를 입력하세요: "); int 나이 = scan.nextInt();
-        if( 나이 < 8 ){ System.out.println( "무료");}
-        else if( 나이 <= 19){ System.out.println("5,000원");}
-        else if( 나이 < 65 ){ System.out.println(" 10,000원");}
-        else{ System.out.println("3,000원");}
+        // System.out.print( "나이를 입력하세요: "); int 나이 = scan.nextInt();
+        // if( 나이 < 8 ){ System.out.println( "무료");}
+        // else if( 나이 <= 19){ System.out.println("5,000원");}
+        // else if( 나이 < 65 ){ System.out.println(" 10,000원");}
+        // else{ System.out.println("3,000원");}
 
         /*[문제 9] Scanner를 이용해 하나의 점수를 입력받아 다음 조건에 따라 등급을 출력하는 프로그램을 작성하시오.
         90점 이상: 'A등급'
@@ -99,101 +98,111 @@ public class Practice4 {
         입력 예시:
         점수를 입력하세요: 85
         출력 예시: B등급 */
-        System.out.print( "점수를 입력하세요: "); int 점수4 = scan.nextInt();
-        if( 점수4 >= 90 ){ System.out.println( "A등급");}
-        else if( 점수4 >= 80 ){ System.out.println( "B등급" );}
-        else if( 점수4 >= 70 ){ System.out.println("C등급" );}
-        else{ System.out.println("재시험" );}
+        // System.out.print( "점수를 입력하세요: "); int 점수4 = scan.nextInt();
+        // if( 점수4 >= 90 ){ System.out.println( "A등급");}
+        // else if( 점수4 >= 80 ){ System.out.println( "B등급" );}
+        // else if( 점수4 >= 70 ){ System.out.println("C등급" );}
+        // else{ System.out.println("재시험" );}
 
+        /*[문제 10] Scanner를 이용해 총 구매 금액을 입력받습니다. 구매 금액에 따라 할인율을 적용하여 최종 결제 금액을 출력하는 프로그램을 작성하시오.
+        50,000원 이상: 10% 할인
+        30,000원 이상 50,000원 미만: 5% 할인
+        10,000원 이상 30,000원 미만: 1% 할인
+        10,000원 미만: 할인 없음
+        입력 예시: 총 구매 금액: 60000
+        출력 예시: 최종 결제 금액: 54000원 */
+
+        // System.out.print("총 구매 금액: "); int 금액 = scan.nextInt();
+        // if( 금액 >= 50000 ){  System.out.println("최종 결제 금액: " + (금액 - 금액 * 10 / 100) + "원"); }
+        // else if( 금액 >= 30000 ){ System.out.println("최종 결제 금액: " + (금액 - 금액 * 5 / 100) + "원"); }
+        // else if( 금액 >= 10000){ System.out.println("최종 결제 금액: " + (금액 - 금액 * 1 / 100) + "원"); }
+        // else{ System.out.println("최종 결재 굼약: " + 금액 + "원"); }
+
+        /*[문제 11] 1부터 12 사이의 월(Month)을 숫자로 입력받아, 해당하는 계절을 출력하는 프로그램을 작성하시오. 
+                    만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
+        봄: 3, 4, 5월
+        여름: 6, 7, 8월
+        가을: 9, 10, 11월
+        겨울: 12, 1, 2월
+        입력 예시:
+        월(1~12)을 입력하세요: 9
+        출력 예시: 가을 */
+
+        // System.out.print("월을 입력하세요: "); int month = scan.nextInt();
+        // if( month >= 3 && month <= 5 ){ System.out.println("봄"); }
+        // else if( month >= 6 && month <= 8){ System.out.println("여름"); }
+        // else if( month >= 9 && month <= 11){ System.out.println("가을"); }
+        // else{ System.out.println("겨울"); }
+
+
+        /*[문제 12] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
+        입력 예시:
+        첫 번째 정수: 45
+        두 번째 정수: 12
+        세 번째 정수: 78
+        출력 예시: 가장 큰 수: 78 */
+        // System.out.print("첫 번째 정수: "); int 정수1 = scan.nextInt();
+        // System.out.print("두 번째 정수: "); int 정수2 = scan.nextInt();
+        // System.out.print("세 번째 정수: "); int 정수3 = scan.nextInt();
+        // if (정수1 > 정수2 && 정수1 > 정수3) {
+        //     System.out.println("가장 큰 수: " + 정수1);
+        // }
+        // else if (정수2 > 정수1 && 정수2 > 정수3) {
+        //     System.out.println("가장 큰 수: " + 정수2);
+        // }
+        // else {
+        //     System.out.println("가장 큰 수: " + 정수3);
+        // }
+
+        /*[문제 13] Scanner를 이용해 연도(year)를 입력받아 해당 연도가 윤년인지 평년인지 판별하는 프로그램을 작성하시오.
+        윤년 조건:
+        연도가 4의 배수이면서, 100의 배수는 아닐 때
+        또는 연도가 400의 배수일 때
+        입력 예시:
+        연도를 입력하세요: 2024
+        출력 예시: 2024년은 윤년입니다. */
+        // System.out.print("연도를 입력하세요: "); int year = scan.nextInt();
+        // if( year % 4 == 0 ){ System.out.println(year+"년은 윤년입니다."); }
+        // else if( year % 100 == 0 ){ System.out.println(year+"년은 평년입니다.");}
+        // else{ System.out.println(year+"년은 평년입니다.");}
+
+
+        /*[문제 14] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
+        입력 예시:
+        첫 번째 정수: 17
+        두 번째 정수: 4
+        세 번째 정수: 8
+        출력 예시: 4, 8, 17 */
+        // System.out.print("첫 번째 정수: "); int 정수1 = scan.nextInt();
+        // System.out.print("두 번째 정수: "); int 정수2 = scan.nextInt();
+        // System.out.print("세 번째 정수: "); int 정수3 = scan.nextInt();
+        // int temp;
+        // if (정수1 > 정수2) { temp = 정수1; 정수1 = 정수2; 정수2 = temp; }
+        // if (정수2 > 정수3) { temp = 정수2; 정수2 = 정수3; 정수3 = temp; }
+        // if (정수1 > 정수2) { temp = 정수1; 정수1 = 정수2; 정수2 = temp; }
+        // System.out.println(정수1 + ", " + 정수2 + ", " + 정수3);
+
+        
+
+        /*[문제 15] 가위바위보 게임
+        지시: 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
+        입력: 플레이어 1과 플레이어 2는 각각 0(가위), 1(바위), 2(보) 중 하나의 숫자를 Scanner로 입력합니다.
+        출력:
+        플레이어 1이 이기면 '플레이어1 승리'를 출력합니다.
+        플레이어 2가 이기면 '플레이어2 승리'를 출력합니다.
+        두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
+        입력 예시:
+        플레이어1 (0:가위, 1:바위, 2:보): 1
+        플레이어2 (0:가위, 1:바위, 2:보): 0
+        출력 예시: 플레이어1 승리 */
+        System.out.print("플레이어1 (0:가위, 1:바위, 2:보): "); int p1 = scan.nextInt();
+        System.out.print("플레이어2 (0:가위, 1:바위, 2:보): "); int p2 = scan.nextInt();
+        if( p1 == p2 ){ System.out.println("무승부"); }
+        else if( p1 == 0 && p2 == 1){ System.out.println("플레이어2 승리");}
+        else if( p1 == 1 && p2 == 2){ System.out.println("플레이어2 승리");}
+        else if( p1 == 2 && p2 == 0){ System.out.println("플레이어2 승리");}
+        else{System.out.println("플레이어1 승리");}
+        
     }
 
 }
-
-
-/*[문제 6] Scanner를 이용해 게임 점수를 정수로 입력받아, 아래 기준에 따라 지급될 상품을 출력하는 프로그램을 작성하시오.
-900점 이상: 'A급 경품'
-700점 이상 900점 미만: 'B급 경품'
-500점 이상 700점 미만: 'C급 경품'
-500점 미만: '참가상'
-입력 예시:
-점수를 입력하세요: 750
-출력 예시: B급 경품 */
-
-/*[문제 7] Scanner를 이용해 사용자 역할(role)을 문자열로 입력받습니다. 역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
-admin: '모든 기능에 접근할 수 있습니다.'
-editor: '콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.'
-viewer: '콘텐츠 조회만 가능합니다.'
-그 외 역할: '정의되지 않은 역할입니다.'
-입력 예시:
-역할을 입력하세요: editor
-출력 예시: 콘텐츠 수정 및 생성 기능에 접근할 수 있습니다. */
-
-/*[문제 8] Scanner를 이용해 사용자의 나이를 정수로 입력받아, 아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
-8세 미만: '무료'
-8세 이상 19세 이하: '5,000원'
-20세 이상 65세 미만: '10,000원'
-65세 이상: '3,000원'
-입력 예시:
-나이를 입력하세요: 22
-출력 예시: 10,000원 */
-
-/*[문제 9] Scanner를 이용해 하나의 점수를 입력받아 다음 조건에 따라 등급을 출력하는 프로그램을 작성하시오.
-90점 이상: 'A등급'
-80점 이상 90점 미만: 'B등급'
-70점 이상 80점 미만: 'C등급'
-70점 미만: '재시험'
-입력 예시:
-점수를 입력하세요: 85
-출력 예시: B등급 */
-
-/*[문제 10] Scanner를 이용해 총 구매 금액을 입력받습니다. 구매 금액에 따라 할인율을 적용하여 최종 결제 금액을 출력하는 프로그램을 작성하시오.
-50,000원 이상: 10% 할인
-30,000원 이상 50,000원 미만: 5% 할인
-10,000원 이상 30,000원 미만: 1% 할인
-10,000원 미만: 할인 없음
-입력 예시: 총 구매 금액: 60000
-출력 예시: 최종 결제 금액: 54000원 */
-
-/*[문제 11] 1부터 12 사이의 월(Month)을 숫자로 입력받아, 해당하는 계절을 출력하는 프로그램을 작성하시오. 만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
-봄: 3, 4, 5월
-여름: 6, 7, 8월
-가을: 9, 10, 11월
-겨울: 12, 1, 2월
-입력 예시:
-월(1~12)을 입력하세요: 9
-출력 예시: 가을 */
-
-/*[문제 12] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
-입력 예시:
-첫 번째 정수: 45
-두 번째 정수: 12
-세 번째 정수: 78
-출력 예시: 가장 큰 수: 78 */
-
-/*[문제 13] Scanner를 이용해 연도(year)를 입력받아 해당 연도가 윤년인지 평년인지 판별하는 프로그램을 작성하시오.
-윤년 조건:
-연도가 4의 배수이면서, 100의 배수는 아닐 때
-또는 연도가 400의 배수일 때
-입력 예시:
-연도를 입력하세요: 2024
-출력 예시: 2024년은 윤년입니다. */
-
-/*[문제 14] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
-입력 예시:
-첫 번째 정수: 17
-두 번째 정수: 4
-세 번째 정수: 8
-출력 예시: 4, 8, 17 */
-
-/*[문제 15] 가위바위보 게임
-지시: 두 명의 플레이어가 참여하는 가위바위보 게임을 만드시오.
-입력: 플레이어 1과 플레이어 2는 각각 0(가위), 1(바위), 2(보) 중 하나의 숫자를 Scanner로 입력합니다.
-출력:
-플레이어 1이 이기면 '플레이어1 승리'를 출력합니다.
-플레이어 2가 이기면 '플레이어2 승리'를 출력합니다.
-두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
-입력 예시:
-플레이어1 (0:가위, 1:바위, 2:보): 1
-플레이어2 (0:가위, 1:바위, 2:보): 0
-출력 예시: 플레이어1 승리 */
-
