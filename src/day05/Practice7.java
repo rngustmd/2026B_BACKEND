@@ -127,9 +127,10 @@ public class Practice7 {
         3. 모든 정보가 저장된 객체의 멤버 변수들을 가져와 "--- 프로필 ---", "이름: [이름]", "나이: [나이]", "MBTI: [MBTI]" 형식으로 출력하세요.*/
         new UserProfile();
         UserProfile u1 = new UserProfile();
-        System.out.print("이름: "); String name = scan.next();
-        System.out.print("나이: "); int a = scan.nextInt();
+        System.out.print("이름: "); String na = scan.next();
+        System.out.print("나이: "); int ag = scan.nextInt();
         System.out.print("MBTI: "); String mb = scan.next();
+        u1.name5 = na; u1.age2 = ag; u1.mbti = mb;
         System.out.println("--- 프로필 ---");
         System.out.println("이름: " + u1.name5 );
         System.out.println("나이: " + u1.age2 );
