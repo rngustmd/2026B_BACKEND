@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 public class Practice7 {
     public static void main(String[] args) {
+
+        // -- 1) 동일한 패키지(폴더)내 동일한 클래스명은 중복 불가능
+        // -- src(개발자코드 .java)   ---> bin(컴파일/번역코드 .class)
+        // -- 2) 첫글자는 대문자 시작
+        // -- 3) 클래스 1개 당 .java 파일 1개 관리 권장 (*디자인패턴*)
+
         // [1] 
         /*
         new Book();
@@ -78,6 +84,9 @@ public class Practice7 {
         m1.isLogin = true;
         System.out.println("로그인 후 상태: " + m1.isLogin);
 
+        // 타입(자료형)이란 : 자료의 구분
+        // 자료란? 데이터들, 리터럴( 3 , 3.14 , 'A' , true )
+        // 기본타입 8가지 vs 참조타입( 배열 , 객체 ) , 즉] 배열과 객체도 (1개)자료이다.
         // [7]
         /*[문제 7] Television 클래스를 만드세요. channel(정수)과 volume(정수) 멤버 변수를 가집니다.
         1. main 함수에서 Television 객체를 생성하고, channel은 7, volume은 20으로 초기화하세요.
@@ -140,7 +149,7 @@ public class Practice7 {
 
 } // class end
 
-// [1]
+// [1] 
 class Book{
     String title;
     String author;
