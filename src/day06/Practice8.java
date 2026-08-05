@@ -3,44 +3,130 @@ package day06;
 public class Practice8 {
     public static void main(String[] args) {
         
-    }
+        // [1]
+        Book b1 = new Book( "이것이 자바다" , "신용권", 30000);
+        Book b2 = new Book( "자바의 정석" , "남궁성", 28000);
+        System.out.println(b1.title + " , " + b1.author + " , " + b1.price);
+        System.out.println(b2.title + " , " + b2.author + " , " + b2.price);
+        
+        // [2]
+        Rectangle r1 = new Rectangle(10 , 5);
+        System.out.println(  "사각형의 넓이: " + r1.width * r1.height);
 
-}
+        // [3]
+        BankAccount ba = new BankAccount( "111-222-3333" , "유재석" , 10000 );
+        System.out.println("잔액: " + ba.balance);
+        ba.deposit(5000);
+        System.out.println("입금 후 잔액: " + ba.balance );
+        ba.withdraw(3000);
+        System.out.println("출금 후 잔액: " + ba.balance);
 
-/*[문제 1] Book 클래스를 만드세요. (title, author, price 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
+        // [4]
+        /*[문제 4] Goods 클래스를 만드세요. (name, price 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
+        1. Goods 클래스에 생성자를 두 개 만드세요(오버로딩).
+        2. 기본 생성자: name은 "미정", price는 0으로 초기화
+        3. 매개변수가 있는 생성자: name과 price를 매개변수로 받아 초기화
+        4. main 함수에서 기본 생성자로 객체 하나, 매개변수가 있는 생성자로 ("콜라", 2000) 정보를 가진 객체 하나를 각각 생성
+        하고, 두 객체의 정보를 모두 출력하세요.*/
+        Goods g1 = new Goods();
+        Goods g2 = new Goods( "콜라" , 2000 );
+        System.out.println( g1.name4 + " , " + g1.price4 );
+        System.out.println( g2.name4 + " , " + g2.price4 );
 
-1. Book 클래스에 title, author, price를 매개변수로 받아 멤버 변수를 초기화하는 생성자를 만드세요.
-2. main 함수에서 이 생성자를 사용하여, ("이것이 자바다", "신용권", 30000) 정보와 ("자바의 정석", "남궁성", 28000)
-정보를 가진 Book 객체 2개를 생성하고, 각 객체의 정보를 출력하세요.*/
+        // [5]
+        /*[문제 5] Member 클래스를 만드세요. (id, isLogin 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
+        1. Member 클래스에 기본 생성자를 만들고, 이 생성자 안에서 id는 "guest", isLogin은 false로 초기화되도록 하세요.
+        2. main 함수에서 new Member()로 객체를 생성하고, 초기화된 id와 isLogin 값을 출력하여 확인하세요.*/
+
+        Member m = new Member();
+        System.out.println( m.id + " , " + m.isLogin );
+
 
         
 
-/*[문제 2] Rectangle 클래스를 만드세요. (width, height 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
-
-1. width와 height를 매개변수로 받아 초기화하는 생성자를 만드세요.
-2. 사각형의 넓이(width * height)를 계산하여 반환하는 getArea() 메소드를 만드세요.
-3. main 함수에서 (10, 5) 값을 가진 Rectangle 객체를 생성하고, getArea() 메소드를 호출하여 "사각형의 넓이: [넓
-이]"를 출력하세요.*/
 
 
-/*[문제 3] BankAccount 클래스를 만드세요. (accountNumber, ownerName, balance 멤버 변수) *멤버변수의
-타입은 적절하게 선택하시오.
+    } // main end
 
-1. 세 멤버 변수를 모두 초기화하는 생성자를 만드세요.
-2. 입금(deposit)과 출금(withdraw) 기능을 하는 메소드를 각각 만드세요.
-3. main 함수에서 ("111-222-3333", "유재석", 10000) 정보로 객체를 생성한 뒤, 5000원을 입금하고 3000원을 출금
-한 후의 최종 잔액을 출력하세요.*/
+} // class end
+// [1]
+class Book{
+    String title;
+    String author;
+    int price;
 
+    Book(){}
 
-/*[문제 4] Goods 클래스를 만드세요. (name, price 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
+    Book( String title , String author , int price ){
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+}
+// [2]
+class Rectangle{
+    int width;
+    int height;
 
-1. Goods 클래스에 생성자를 두 개 만드세요(오버로딩).
-2. 기본 생성자: name은 "미정", price는 0으로 초기화
-3. 매개변수가 있는 생성자: name과 price를 매개변수로 받아 초기화
-4. main 함수에서 기본 생성자로 객체 하나, 매개변수가 있는 생성자로 ("콜라", 2000) 정보를 가진 객체 하나를 각각 생성
-하고, 두 객체의 정보를 모두 출력하세요.*/
+    Rectangle(){}
 
+    Rectangle( int width , int height ){
+        this.width = width;
+        this.height = height;
+    }
+}
+// [3]
+class BankAccount{
+    String accountNumber;
+    String ownerName;
+    int balance;
 
+    BankAccount(){}
+
+    BankAccount( String accountNumber , String ownerName , int balance ){
+        this.accountNumber = accountNumber;
+        this.ownerName = ownerName;
+        this.balance = balance;
+    }
+    // 입금 메소드
+    void deposit(int money) {
+        balance += money;
+    }
+    // 출금 메소드
+    void withdraw(int money) {
+        balance -= money;
+    }
+}
+// [4]
+class Goods{
+    String name4;
+    int price4;
+
+    Goods(){
+        this.name4 = "미정";
+        this.price4 = 0;
+    }
+
+    Goods( String name4 , int price4 ){
+        this.name4 = name4;
+        this.price4 = price4;
+    }
+}
+// [5]
+class Member{
+    String id;
+    boolean isLogin;
+
+    Member(){
+        this.id = "guest";
+        this.isLogin = false;
+    }
+
+    Member( String id , boolean isLogin ){
+        this.id = id;
+        this.isLogin = isLogin;
+    }
+}
 /*[문제 5] Member 클래스를 만드세요. (id, isLogin 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
 
 1. Member 클래스에 기본 생성자를 만들고, 이 생성자 안에서 id는 "guest", isLogin은 false로 초기화되도록 하세요.
