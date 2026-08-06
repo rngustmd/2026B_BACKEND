@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class OverallController {
 
     public static void main(String[] args) {
-        Post[] posts = new Post[100];
+        Post[] posts = new Post[100]; // posts: 게시물 목록 , post : 새로운 게시물
         Scanner scan = new Scanner( System.in );
 
         for (;;) {

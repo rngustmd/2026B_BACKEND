@@ -76,11 +76,14 @@ class Rectangle{
     }
 }
 // [3]
-class BankAccount{
-    String accountNumber;
+class BankAccount{ // class란? 객체(인스턴스) 만들기 위한 설계도( 실체가 아니다. )
+    // * 클래스(설계도)가 동일하더라도 객체(인스턴스)는 new 마다 서로 다른 실체!
+    String accountNumber; // 멤버 변수(필드) : 객체가 생성되면 객체 내 사용할 변수 뜻
     String ownerName;
     int balance;
-
+    // 생성자란? 객체(인스턴스) 생성할 때 초기값 대입
+    // 매개변수? 외부로부터 생성자/메소드에게 전달되는 값(인수) 저장하는 변수
+    // 관례적으로 생성자의 매개변수는 멤버변수명과 동일하며 this 구분
     BankAccount(){}
 
     BankAccount( String accountNumber , String ownerName , int balance ){

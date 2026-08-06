@@ -63,7 +63,7 @@ create table test3(
         -- on delete/update set null    : pk가 삭제/수정 되면 fk은 null으로 수정
         -- on delete/update restrict    : (생략시 기본값) pk가 fk로부터 참조 중이면 삭제/수정 불가능
 );
-creat table test4(
+create table test4(
     필드명1 bigint, 
     constraint foreign key( 필드명1 ) references test3 (필드명5) on delete cascade on update cascade
 );
