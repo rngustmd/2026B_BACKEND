@@ -13,7 +13,7 @@ USE practice2;
 -- email (이메일): 문자열(100), Unique, NULL 허용 안함
 -- join_date (가입일): 날짜/시간, Default 현재 날짜/시간
 -- is_active (활성여부): 논리형(bool), Default true
-CREATE TABLE member (
+CREATE TABLE members (
     member_id INT AUTO_INCREMENT        , member_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE  , join_date DATETIME DEFAULT NOW( ),
     is_active BOOLEAN DEFAULT TRUE,
