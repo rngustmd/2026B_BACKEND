@@ -9,8 +9,32 @@ import java.util.Scanner;
 */
 public class OveralController { 
     public static void main(String[] args) {
-
-
+        // [4] 반복문 
+        OveralRepository repository = new OveralRepository(); // 다른클래스내 메소드 호출하는 방법
+        for( ; ; ){
+            // [1] 출력함수 이용하여 화면 구성 
+            System.out.println("============ My Community ============ ");
+            System.out.println("1.게시물쓰기 2.게시물출력" );
+            System.out.println("======================================");
+            // [2] 입력함수 이용한 입력받기
+            Scanner scan = new Scanner( System.in );
+            System.out.print("선택>"); int ch = scan.nextInt();
+            // [3] 분기: 서로다른 출력문 보여주기 위해
+            if( ch == 1 ){ // Create : 입력받은값 -> 객체 생성 -> 배열 저장( push없다. )
+                System.out.println("내용:");    String 내용 = scan.next();
+                System.out.println("작성자:");  String 작성자 = scan.next();
+                Post post = new Post(내용, 작성자);
+                repository.save( post );
+                System.out.println("글쓰기 성공 / 실패 ");
+            }else if( ch == 2 ){ // Read :  무엇(배열내 저장된 게시물 ) 을 출력 
+                Post[] posts = repository.findAll();
+                for( Post 기존게시물 : posts ){
+                    if( 기존게시물 != null ){ // null 자료는 .(도트) 사용할 수 없다.
+                        System.out.println( 기존게시물.content + 기존게시물.writer );
+                    }
+                }
+            }
+        }
     }
 
 }
