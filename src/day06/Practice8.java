@@ -40,7 +40,7 @@ public class Practice8 {
 
         Member m = new Member();
         System.out.println( m.id + " , " + m.isLogin );
-
+        
 
         
 
