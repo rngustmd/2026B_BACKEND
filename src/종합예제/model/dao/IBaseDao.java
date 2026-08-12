@@ -12,3 +12,5 @@ public interface IBaseDao {
     ArrayList<Object> findAll();
 
 }
+// 인터페이스 사용 BoardDao , ProductDao
+// save와 findAll 동일한 목적의 기능을 수행하게끔 == 구조 통일
