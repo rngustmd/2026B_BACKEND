@@ -88,9 +88,11 @@ public class Practice12 {
         */
 
         // [10]
+        Laptop laptop = new Laptop();
+        System.out.println( laptop instanceof Electronic );
+        System.out.println( laptop instanceof Device );
 
-        
-
+    
             
         }
                 
@@ -182,8 +184,16 @@ class SubClass extends SuperClass{
 필드는 오버라이딩이 되지 않고 메소는 오버라이딩 가능
 객체인 name은 상위 그대로, 상위 메소드는 하위메소드로 재정의
 */
+// [10]
+class Device{
 
+}
+class Electronic extends Device{
 
+}
+class Laptop extends Electronic{
+
+}
 
 
 
