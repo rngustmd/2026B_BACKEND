@@ -79,9 +79,9 @@ public class Practice12 {
         1. String name = "상위"; 필드와 method() 메소드("상위 메소드" 출력)를 가진 SuperClass를 만드세요.
         2. SuperClass를 상속받고, String name = "하위"; 필드와 method() 메소드("하위 메소드" 출력)를 가진 SubClass를 만드세요.
         3. SuperClass obj = new SubClass(); 로 객체를 생성한 뒤, obj.name과 obj.method()를 각각 호출했을 때의 결과를 확인하고, 왜 다른 결과가 나오는지 주석으로 설명하세요.*/
-        SuperClass obj = new SubClass();
-        System.out.println(obj.name);
-        obj.method();
+        SuperClass obj = new SubClass(); // 업캐스팅(자동타입변환) Sub -> Super
+        System.out.println(obj.name); // '상위'
+        obj.method(); // 멤버변수는 오버라이딩이 아니다. 각각.
         /*
         필드는 오버라이딩이 되지 않고 메소는 오버라이딩 가능
         객체인 name은 상위 그대로, 상위 메소드는 하위메소드로 재정의
@@ -171,7 +171,7 @@ class Character{
     }
 }
 
-// [9]
+// [9] 멤버변수는 각각 , 메소드는 공유
 class SuperClass{
     String name = "상위";
     void method(){ System.out.println("상위 메소드");}
