@@ -1,11 +1,16 @@
 package day12;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Exam1 {
     public static void main(String[] args) {
         // 예외란? 에러발생 시 고치는게 아니라 흐름 제어 vs if
+        // 예외처리: try{ 예외발생코드 }catch( 예외클래스명 변수명 ){ 처리할코드 }
+        
         // [1] 일반예외 : 실행(컴파일) 하기 전 예외가 발생할 수 있는 코드에 대해 미리 예외
         try{
-            Class.forName("java.lang.String"); // class.forName("찾을클래스") 동적으로 존재하는 클래스 로드(읽어
+            Class.forName("java.lang.String"); // class.forName("찾을클래스") 동적으로 존재하는 클래스 로드(읽어오기)
         }catch( ClassNotFoundException e ){
             System.out.println("존재하지 않은 클래스입니다." + e);
         }
@@ -16,6 +21,7 @@ public class Exam1 {
             System.out.println("인터럽트 문제 발생" + e);
         }
         // [2] 실행예외: 실행( 컴파일 ) 후 예외 발생 *경험 중요* 예측 하거나 유지보수 ( 로그 )
+        // 3. NullPointerException : 참조가 없는데 참조하는 경우
         try{
         String str1 = null; // null이란? 참조값이 없다. 즉] 객체(인스턴스) 가 없다.
         System.out.println( str1.length() );// .(도트/접근)연산자는 참조할 대상의 멤버들 접근
@@ -33,9 +39,35 @@ public class Exam1 {
             System.out.println( 배열[0] );
             System.out.println( 배열[5] ); // 없는 인덱스 호출/사용
         }catch( ArrayIndexOutOfBoundsException e ){ System.out.println( e );}
-
         // * 여러 타입들의 예외들을 하나의 타입으로 Exception 클래스 사용한다.
 
+        // [3] 다중 catch : try에서 다양한 예외들을 다양하게 흐름 제어 , catch 1번!
+        // [4] finally : 예외가 발생 여부 상관없이 무조건 실행 구역 , 외부 프로그램 연동 종료 코드
+        // 6. InputMismatchException: 타입 예외
+        Scanner scan = new Scanner(System.in);
+        try{
+            System.out.println("정수입력: ");
+            int ch = scan.nextInt(); // nextInt() 입력받은 자료들을 INT타입 변환 함수
+            Integer.parseInt("ABC"); // 예외
+        }catch( InputMismatchException e ){ 
+            System.out.println("정수만 입력하세요." + e);
+        }catch( NumberFormatException e ){ // 다중 catch 에서 마지막!에 Exception 사용하여 그외 처리한다.
+            System.out.println("타입변환 오류" + e);
+        }catch( Exception e ){ // 다중 catch에서 마지막!에 Exception 사용하여 그 외 처리한다.
+            System.out.println("예외발생: 관리자에게 문의: " + e);
+        }finally{ System.out.println("무조건 실행"); }
+
+        // * try{ 예외발생할것코드 }catch( 예외클래스명 변수명 ){ }catch( 예외클래스명 변수명 ){ }finally{ }
+
+        // [5] 예외 던지기(터넘기기) , *예외반환*: 해당 메소드를 호출한 곳으로 예외 반환
+            try{
+                method1(); // 예외가 반환됨에 따라 예외처리 해야 한다.
+            }catch( Exception e ){ System.out.println("메소드 예외방법");}
+    }
+    
+    // 7. 예외발생시 발생한 곳에서 예외처리 하지 않고 반환
+    public static void method1( ) throws ClassNotFoundException { 
+        Class.forName("java.lang.Spring"); // 예외발생?
     }
 
 }
