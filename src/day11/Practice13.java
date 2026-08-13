@@ -2,14 +2,32 @@ package day11;
 
 public class Practice13 {
     public static void main(String[] args) {
+        // 다형성 : 하나의 변수가 여러 타입들의 하나의 자료 저장 * 변수는 하나의 자료 저장 *
+        // 3(int)   byte a = 3 , short b = a , long = a < 다형성: 업캐스팅 >
+        // 자동타입변환) IbaseDao ib = productDao , IbaseDao ib = boardDao , Object obj = productDto 
+        // 강제타입변환) long = a 3L , int b (int)a , short c = (short)b < 다형성: 다운캐스팅 >
+        // (ProductDto)obj
         Cat cat;
         Dog dog;
         cat = new Cat();
         dog = new Dog();
         cat.makeSound();
         dog.makeSound();
-    }
+    
+        // [2] 상수는 인스턴스가 필요없다. 상수(static)이며 static은 프로그램 시작 시 메모리 할당 프로그램 종료시킨다.
+        // 클래스명.상수명 , 인터페이스명.상수명
+        // 1. 첫글자가 대문자이면 인터페이스/클래스명 , 2. 첫글자 소문자이면 변수/멤버변수
+        // MyCar -> 클래스/인터페이스                     myCar -> 변수/멤버변수(관례)
+        // 3. 전체가 대문자이면 상수                 , 4. 첫글자 소문자이면 ( ) 함수
+        // MYCAR -> 상수                                myCar( ) -> 함수
+        System.out.println( RemoteControl.MAX_VOLUME );   
 
+        // [7] 익명 구현 객체 : 클래스 없이 일회성 구현체 만들기
+        Greeting greeting = new Greeting() {
+            public void welcome(){ System.out.println("구현");}
+        }; greeting.welcome();
+
+    }
 }
 // [1]
 interface Soundable{
@@ -22,12 +40,12 @@ class Dog implements Soundable{
     @Override public void makeSound(){ System.out.println( "멍멍" ); }
 }
 // [2]
+interface RemoteControl{
+    int MAX_VOLUME = 10;    int MIN_VOLUME = 0;
+}
 
-/*[문제 1] 기본 인터페이스와 구현
-1. "소리를 냅니다."라는 추상 메소드 makeSound()를 가진 Soundable 인터페이스를 정의하세요.
-2. Soundable 인터페이스를 구현(implements)하는 Cat 클래스와 Dog 클래스를 만드세요.
-3. 각 클래스에서 makeSound() 메소드를 오버라이딩하여, 각각 "야옹", "멍멍"을 출력하도록 구현하세요.
-4. main 함수에서 Cat 객체와 Dog 객체를 생성하고, 각 객체의 makeSound() 메소드를 호출하여 결과를 확인하세요.*/
+// [7]
+interface Greeting{ void welcome(); }
 
 /*[문제 2] 인터페이스 상수
 1. RemoteControl 인터페이스를 만드세요.

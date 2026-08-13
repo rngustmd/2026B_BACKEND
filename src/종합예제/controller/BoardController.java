@@ -12,7 +12,7 @@ public class BoardController {
     public static BoardController getInstance() { return instance; }
     
     private IBaseDao ib = BoardDao.getInstance();
-    // 다형성 사용
+    
     public boolean save(BoardDto boardDto) {
         // TODO 1: boardDto 전달받아 DAO의 save()를 호출하고 결과 반환
         boolean result = ib.save(boardDto);
