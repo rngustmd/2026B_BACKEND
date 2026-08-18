@@ -61,9 +61,26 @@ SELECT * FROM pcategory pc
     INNER JOIN stock s ON p.제품번호_pk = s.제품번호_fk;
 
 -- [문제 6] 모든 카테고리의 카테고리명과 해당 카테고리에 속한 제품명을 조회하세요. 만약 카테고리에 속한 제품이 없더라도 카테고리명은 모두 표시되도록 하세요.
+SELECT pc.카테고리명 ,
+    p.제품명 FROM pcategory pc
+    LEFT JOIN product p ON pc.카테고리번호_pk = p.카테고리번호_fk;
 
 -- [문제 7] 재고가 한 번도 등록되지 않은 제품의 제품명을 조회하세요.
+SELECT p.제품명 FROM product p
+    LEFT JOIN stock s ON p.제품번호_pk = s.제품번호_fk
+    WHERE s.제품번호_fk IS null;
 
 -- [문제 8] 각 카테고리별로 총 재고 수량의 합계를 카테고리명과 함께 조회하세요. 
+SELECT pc.카테고리명 , 
+    SUM(s.재고수량) AS 총재고수량 FROM pcategory pc
+    INNER JOIN product p ON pc.카테고리번호_pk = p.카테고리번호_fk
+    INNER JOIN stock s ON p.제품번호_pk = s.제품번호_fk
+    GROUP BY pc.카테고리명;
 
--- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요.
+-- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 
+-- 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요.
+SELECT p.제품명 ,
+    SUM(s.재고수량) AS 총재고수량 FROM product p
+    INNER JOIN stock s ON p.제품번호_pk = s.제품번호_fk
+    GROUP BY p.제품명
+    ORDER BY 총재고수량 DESC;
