@@ -18,7 +18,6 @@ public class Practice15 {
         inventory.add(slot3);
         inventory.add(slot4);
         
-        
         slot1.setSlotNumber(1);
         slot1.setData("집행자의 검");
 
