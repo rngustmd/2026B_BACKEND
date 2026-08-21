@@ -2,8 +2,6 @@ package day14;
 
 import java.util.ArrayList;
 
-import com.mysql.cj.util.Util;
-
 public class Exam1 {
     public static void main(String[] args) {
         
